@@ -8,6 +8,8 @@ import { PlateauxComponent } from './component/plateaux/plateaux.component';
 import { PanierComponent } from './component/panier/panier.component';
 import { CommandesComponent } from './component/commandes/commandes.component';
 import { RgpdComponent } from './component/rgpd/rgpd.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { HeaderComponent } from './component/header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { RgpdComponent } from './component/rgpd/rgpd.component';
     PanierComponent,
     CommandesComponent,
     RgpdComponent,
+    FooterComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
