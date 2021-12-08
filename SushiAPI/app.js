@@ -5,8 +5,13 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/sushishop');
+var db = monk('127.0.0.1:27017/sushishop');
 var cors = require('cors');
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("connecté à MongoDB !")
+});
 
 // Définition des variables indiquant les routes utilisées
 var indexRouter = require('./routes/index');

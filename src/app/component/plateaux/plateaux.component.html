@@ -1,3 +1,11 @@
-<div>
-    <h1>A faire</h1>
+<h1>Liste des Boxes</h1>
+ 
+<div class="boxes">
+  <div class="article" *ngFor="let boxe of sushi">
+    <img src="assets/images/{{boxe.image}}.png">
+    <p>{{ boxe.nom }} </p>
+    <p>{{ boxe.prix }}€</p>
+    <p>{{ boxe.pieces }}</p>
+    <button class="button">Commander</button>
+  </div>
 </div>
