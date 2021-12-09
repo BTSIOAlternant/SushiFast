@@ -122,7 +122,17 @@ Destinataires CC : M.Capuozzo, **autres membres de l’équipe**
 
 ### Les requêtes illustrées sur l'API concernant l'ensemble des plateaux
 
+API du repos :
+
+Fichier : **sushi-shop.service.ts**
+
+```
+const apiRest = 'http://127.0.0.1:3000';
+```
+
 API de tous les plateaux Nodes JS :
+
+Fichier : **boxes.js**
 
 ```
 // Retourne tous les plateaux
@@ -137,6 +147,8 @@ router.get('/', function (req, res, next) {
 
 Affichage de tous les plateaux Angular :
 
+Fichier : **sushi-shop.service.ts**
+
 ```
 getAllsushis(): Observable <any> {
     return this.http.get<any> (apiRest + '/boxes').pipe(
@@ -149,11 +161,15 @@ getAllsushis(): Observable <any> {
 
 API du repos :
 
+Fichier : **sushi-shop.service.ts**
+
 ```
 const apiRest = 'http://127.0.0.1:3000';
 ```
 
 API d'un plateau Nodes JS :
+
+Fichier : **boxes.js**
 
 ```
 // Affichage d'un plateau
@@ -168,6 +184,8 @@ router.get('/:id', (req, res) => {
 ```
 
 Affichage d'un tableau Angular :
+
+Fichier : **sushi-shop.service.ts**
 
 ```
 getOnesushi(id : number): Observable<any> {
