@@ -117,6 +117,9 @@ Destinataires CC : M.Capuozzo, **autres membres de l’équipe**
 
 ![diagram_sequentiel](assets_readme/diagram/diagram_sequentiel.png)
 
+### Diagram cas d'utilisation
+![diagram_cas](assets_readme/diagram/diagram_cas.png)
+
 ### Les requêtes illustrées sur l'API concernant l'ensemble des plateaux
 
 ### Champ d'utilisation du RGPD dans le projet
