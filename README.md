@@ -122,6 +122,59 @@ Destinataires CC : M.Capuozzo, **autres membres de l’équipe**
 
 ### Les requêtes illustrées sur l'API concernant l'ensemble des plateaux
 
+API de tous les plateaux Nodes JS :
+
+```
+// Retourne tous les plateaux
+router.get('/', function (req, res, next) {
+  var db = req.db;
+  var collection = db.get('boxes');
+  collection.find({}, function (e, listeBoxes) {
+    res.send(listeBoxes);
+  });
+});
+```
+
+Affichage de tous les plateaux Angular :
+
+```
+getAllsushis(): Observable <any> {
+    return this.http.get<any> (apiRest + '/boxes').pipe(
+      catchError(this.handleError)
+    );
+  }
+```
+
+### Les requêtes illustrées sur l'API concernant un plateau
+
+API du repos :
+
+```
+const apiRest = 'http://127.0.0.1:3000';
+```
+
+API d'un plateau Nodes JS :
+
+```
+// Affichage d'un plateau
+router.get('/:id', (req, res) => {
+  var db = req.db;
+  var collection = db.get('boxes');
+  let { id } = req.params;
+  collection.find({ "id": parseInt(id) }, function (e, unBoxe) {
+    res.send(unBoxe);
+  });
+});
+```
+
+Affichage d'un tableau Angular :
+
+```
+getOnesushi(id : number): Observable<any> {
+    return this.http.get<any> (apiRest + '/boxes/' + id)
+  }
+```
+
 ### Champ d'utilisation du RGPD dans le projet
 
 ### Format de la structure JSON des commandes enregistrées dans le LocalStorage
