@@ -115,7 +115,7 @@ Destinataires CC : M.Capuozzo, **autres membres de l’équipe**
 
 ### Diagram séquentiel
 
-[diagram_sequentiel](assets_readme/diagram/diagram_sequentiel.png)
+![diagram_sequentiel](assets_readme/diagram/diagram_sequentiel.png)
 
 ### Les requêtes illustrées sur l'API concernant l'ensemble des plateaux
 
