@@ -1,5 +1,9 @@
 # Application de restauration rapide SushiFast
 
+## Ressources pour le projet
+
+[SushiFast](https://slam-vinci-melun.github.io/sio22/phase2/SP2-Angular-2021_22.pdf)
+
 ## Sommaire
 
 * Présentation
@@ -97,7 +101,24 @@ Destinataires CC : M.Capuozzo, **autres membres de l’équipe**
         -> les différents diagrammes demandés,
         -> des requêtes illustrées sur l’API concernant l’ensemble des plateaux,
         -> le champ d’utilisation du RGPD dans ce projet sachant qu’il sera amené à être plus tard en ligne,
-        -> le format de la structure JSon (interface ts) des commandes enregistrées dans le LocalStorage.
+        -> le format de la structure JSON (interface ts) des commandes enregistrées dans le LocalStorage.
 
     2) Date butoir pour la version finale du projet : vendredi 18 février 2022 - 23 h 59
 
+### Informations du projets
+
+* Date du projet : 2 décembre 2021
+* Nom de l'équipe : Les alternants
+* Participants au projet : Enzo Carpentier, Kilian Moliere et Corentin Bonifacio
+
+### Les différents diagrammes demandés
+
+### Diagram séquentiel
+
+[diagram_sequentiel](assets_readme/diagram/diagram_sequentiel.png)
+
+### Les requêtes illustrées sur l'API concernant l'ensemble des plateaux
+
+### Champ d'utilisation du RGPD dans le projet
+
+### Format de la structure JSON des commandes enregistrées dans le LocalStorage
