@@ -1,11 +1,13 @@
 <h1>Liste des Boxes</h1>
  
 <div class="boxes">
-  <div class="article" *ngFor="let boxe of sushi">
-    <img src="assets/images/{{boxe.image}}.png">
-    <p>{{ boxe.nom }} </p>
-    <p>{{ boxe.prix }}€</p>
-    <p>{{ boxe.pieces }}</p>
-    <button class="button">Commander</button>
-  </div>
+    <div class="article" *ngFor="let boxe of sushi">
+            <img src="assets/images/{{boxe.image}}.png">
+            <p >Nom : {{ boxe.nom }} </p>
+            <p>Prix : {{ boxe.prix }} €</p>
+            <p>Nb Pieces : {{ boxe.pieces }}</p>
+            <form [formGroup]="boxeForm" (ngSubmit)="addPanier(boxe.nom, boxe.prix, boxe.image)">
+                <button class="button is-link">Ajoutez au panier</button>
+            </form>
+    </div>
 </div>

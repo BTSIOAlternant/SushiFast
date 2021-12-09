@@ -10,4 +10,11 @@ h1 {
     color: salmon;
 }
 
+.boxes {
+/*Pour afficher vos sushis en ligne/colonne*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto;
+}
 

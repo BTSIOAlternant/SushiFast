@@ -1,3 +1,12 @@
-<div>
-    <h1>A faire</h1>
+<h1>Mon panier</h1>
+ 
+<div class="boxes">
+    <div class="article" *ngFor="let boxe of lesCommandes">
+            <img src="assets/images/{{boxe.image}}.png">
+            <p >Nom : {{ boxe.nom }} </p>
+            <p>Prix : {{ boxe.prix }} €</p>
+            <form [formGroup]="deleteArticle" (ngSubmit)='supprimer(boxe.nom)'> 
+                <button class="button is-link">Supprimer L'article</button> 
+            </form>
+    </div>
 </div>
