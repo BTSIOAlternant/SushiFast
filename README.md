@@ -195,7 +195,7 @@ getOnesushi(id : number): Observable<any> {
 
 ### Champ d'utilisation du RGPD dans le projet
 
-Pour visualiser notre champ d'utilisation du RGPD, référé vous à ce liens ci : 
+Pour visualiser notre champ d'utilisation du RGPD, référé vous à ce lien-ci : 
 [RGPD](https://github.com/CorentinSIOdev/SushiFast/blob/main/src/app/component/rgpd/rgpd.component.html)
 
 ### Format de la structure JSON des commandes enregistrées dans le LocalStorage
