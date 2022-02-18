@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { SushiService } from 'src/app/config/sushi-shop.service';
 import { CommandeService } from '../../services/commande.service';
 import { Commande } from '../../classes/commande';
@@ -13,6 +13,7 @@ export class PlateauxComponent implements OnInit {
 
   sushi: any;
   boxeForm!: FormGroup;
+
   constructor(private commandeService:CommandeService, public sushiService: SushiService) { }
   
   ngOnInit() {
@@ -29,7 +30,9 @@ export class PlateauxComponent implements OnInit {
   }
 
   addPanier(nom: string, prix: number, image: string) { 
+    alert("un item ajouté")
     let laBoxe = new Commande(nom, prix, image);
     this.commandeService.addItems(laBoxe);
   }
+
 }
