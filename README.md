@@ -6,6 +6,8 @@
 
 ## Sommaire
 
+### Premieres Partie 
+
 * Présentation
 
 * Attendus fonctionnels
@@ -199,3 +201,8 @@ Pour visualiser notre champ d'utilisation du RGPD, référé vous à ce lien-ci 
 [RGPD](https://github.com/CorentinSIOdev/SushiFast/blob/main/src/app/component/rgpd/rgpd.component.html)
 
 ### Format de la structure JSON des commandes enregistrées dans le LocalStorage
+
+### Deuxième Partie 
+
+Voici 3 cas d'[Evil Stories](https://github.com/CorentinSIOdev/SushiFast/files/8100495/Evile_Storie_Sushi_Fast.pdf)
+
