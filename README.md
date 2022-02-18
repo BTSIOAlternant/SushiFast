@@ -204,5 +204,137 @@ Pour visualiser notre champ d'utilisation du RGPD, référé vous à ce lien-ci 
 
 ### Deuxième Partie 
 
-Voici 3 cas d'[Evil Stories](https://github.com/CorentinSIOdev/SushiFast/files/8100495/Evile_Storie_Sushi_Fast.pdf)
+Page d'accueil Sushi Fast :
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/38391212/154764110-1db19ce6-979b-4c26-be65-66ab0450ab52.png">
+
+Page Nos Plateaux :
+
+<img width="1436" alt="image" src="https://user-images.githubusercontent.com/38391212/154764318-c9699ad2-afd5-4e53-a88f-ab0c4684b6fa.png">
+
+Code HTML pour l'affichage des boxes :
+
+<img width="950" alt="image" src="https://user-images.githubusercontent.com/38391212/154765486-361688f0-16bd-463a-91b0-aaa9e4d7217d.png">
+
+Code Typescript :
+
+<img width="854" alt="image" src="https://user-images.githubusercontent.com/38391212/154765546-39a3264f-cc24-4408-9b21-777549ce1eea.png">
+
+Sur ce code il y a plusieurs fonctions la principale consiste bien a affiché toutes les boxes mais une autre consiste a ajouter au panier (sur une autre page en passant par un service qui lui l'ajoute au localStorage)
+
+Page Mon panier :
+
+<img width="1438" alt="image" src="https://user-images.githubusercontent.com/38391212/154765725-143e1f31-4c93-4c8f-bfc6-c184a9dfbaf6.png">
+<img width="717" alt="image" src="https://user-images.githubusercontent.com/38391212/154765765-ef4154f0-3b93-4845-a956-e9dd70c4b2db.png">
+
+Code  HTML : 
+
+<img width="939" alt="image" src="https://user-images.githubusercontent.com/38391212/154765810-b672bc6a-27c0-4423-823e-65ce9b17c5a4.png">
+
+Code TypeScript : 
+
+La fonction pour supprimer 1 articles ou alors tous les articles :
+
+<img width="775" alt="image" src="https://user-images.githubusercontent.com/38391212/154765861-34b6d71d-8009-4de2-b1db-95acc947cec8.png">
+
+La fonction pour ajouter au payment :
+
+<img width="935" alt="image" src="https://user-images.githubusercontent.com/38391212/154765950-f11c0e37-a941-4ac9-96c5-7511dd34b5bd.png">
+
+Cette function va générer un nombre random compris entre 1 et 2 si deux fois, si les deux nombre générer sont identique alors le payment est validé cette function est juste pour éviter de faire valider la commande directement c'est un petit ajout car je n'ai pas pu faire de page pour rentrer une fausse carte comme ce que je voulais faire de base.
+La function permet aussi de stocker la liste des articles / date de commande / prix total / nombre d'article acheté 
+Et une fois le payment validé une redirection vers historique de commande est effectuer automatiquement et une suppresion du localStorage Commande est aussi effectuer.
+
+Page Historiques de Commandes : 
+
+<img width="1386" alt="image" src="https://user-images.githubusercontent.com/38391212/154766238-d957cb6e-1c0c-495c-8c34-d96ab77e2ce5.png">
+
+Code HTML :
+
+<img width="1021" alt="image" src="https://user-images.githubusercontent.com/38391212/154766284-ffbc62a4-a158-410e-9dcc-043cb108e964.png">
+
+On affiche sous forme de tableau les résultat que nous avons au paravant insérer dans le local Storage sous la condition "Historique :"
+
+Code Typescript : 
+
+<img width="1022" alt="image" src="https://user-images.githubusercontent.com/38391212/154766385-4cd85d53-128d-4d9e-a77b-ded01e724965.png">
+
+OnInit() donc a l'initialisation de la page je récupère l'historique des commandes et je l'affiche dans la boucle for ng for écrit dans la partie HTML
+Pour la suppression je la trie en function de la date d'achat sous forme de caractères "Date Now = 1645221338524" et alors je supprime la commande en question 
+ou alors je peux toujours supprimer toutes les commandes.
+
+Page RGPD : 
+
+<img width="1426" alt="image" src="https://user-images.githubusercontent.com/38391212/154764196-3b82c1ce-44fc-4910-bb5e-1bf643ca52f5.png">
+
+Code HTML : 
+
+<img width="945" alt="image" src="https://user-images.githubusercontent.com/38391212/154764243-90da23f7-b234-44a3-8354-4ab509a4747e.png">
+
+Et pour finir voici les 3 cas d'Évil stories que j'ai pu trouver 
+
+Evile Storie Sushi Fast
+
+SushiFast est un logiciel uniquement disponible pour les employés pour la gestion de commande on peut comparer cela a la borne de commande au McDo
+Evile Stories 1 :
+
+En tant que personne voulant faire n’importe quoi et/ou nuire a SushiFast je me rend compte que la function pour supprimer une commande dans l’historique est filtré en fonction du prix donc si par exemple deux commande on le même prix je vais alors pouvoir supprimer les deux commandes d’un coup ! 
+
+En tant que développeur ayant vue le problème je décide donc de choisir un autre filtre et ce filtre sera la date sous forme de numéro ce qui permettra d’être sur qu’il n’y est pas plusieurs commandes supprimé lors de la suppresion d’une Commande 
+
+pour faire cela je vais donc rajouter dans ma classe historique.ts un endroit pour stocker ce date.now
+
+￼![Untitled](https://user-images.githubusercontent.com/38391212/154766822-37215cc3-eb33-45d9-a6d2-864b952c3b87.png)
+
+
+Et dans le code panier.component.ts je vais crée la date lors de la validation du payment et au passage je vais améliore mon historique de commande en transformant mon Date.now sous format Fri, 18 Feb 2022 20:38:33 GMT 
+
+￼![Untitled 1](https://user-images.githubusercontent.com/38391212/154766842-8e066eec-cc82-489a-8728-e227f8e99e48.png)
+
+
+Une fois cela effectuer et injecter dans mon historique service 
+
+￼![Untitled 2](https://user-images.githubusercontent.com/38391212/154766847-c2ff9d0e-2338-43e0-a920-41ccd1f7d8e8.png)
+
+
+Je vais maintenant filtré mon commandes.component.ts pour qu’il trie par date.now et qu’il arrête de trier par prix de cette manière :
+
+￼![Untitled 3](https://user-images.githubusercontent.com/38391212/154766862-50239798-0f92-468d-bbd3-3155302454d1.png)
+
+
+Evile Stories 2 : 
+
+En tant que personne voulant faire n’importe quoi et/ou nuire a SushiFast je vais alors commander sans rien vraiment commander de manière vide et donc ajouter dans l’historique de commande des tableaux vides car rien n’a été commandé.
+
+En tant que développeur ayant vue que l’on pouvais faire cela j’ajoute une condition qui stipule que si il n’y a pas de panier ajouter au panier alors j’affiche “Votre Panier est vide” et je ne permet pas de commander pour faire cela je vais juste ajouter : 
+
+￼![Untitled 4](https://user-images.githubusercontent.com/38391212/154766870-89b073e2-be87-463b-9e8e-01c987b861ef.png)
+
+
+
+il sera alors redirigé dans #commandeVide si lesCommandes.length > 0;
+
+Evile Stories 3 :
+
+En tant que personne voulant faire n’importe quoi et/ou nuire a SushiFast j’ai voulu ajouter plein de fois la même box et faire des commandes massivement sans les récupérer après.
+
+En tant que développer je vais alors limiter l’ajout d’une box pour éviter ce genre de cas je vais donc le limiter a 10 / 12 pour faire cela il faut d’abord que je regarde si j’ai ajouter plusieurs fois la même boxe de cette manière : 
+
+￼![Untitled 5](https://user-images.githubusercontent.com/38391212/154766876-bec4a9cc-9246-484a-a3ee-7dc6ac5aa265.png)
+
+
+Je vais donc detecter si la même box a été ajouter plusieurs fois :
+
+￼![Untitled 6](https://user-images.githubusercontent.com/38391212/154766881-01c9d783-a97e-4b46-9af7-e4e314b9f83c.png)
+
+
+Pour aller plus loin je vais limiter l’ajout de cette même box a 10 malheureusement je n’ai pas pu finaliser ce cas du a un manque de temps :
+
+￼![Untitled 7](https://user-images.githubusercontent.com/38391212/154766891-caac8340-f04b-4a56-8c8f-daa3ff2b692b.png)
+
+
+Mais le code ressemblerais a cela et dans /// code here j’aurais du manipuler le localStorage pour qu’il enleve les commandes effectué en trop
+
+
+Format [PDF](https://github.com/CorentinSIOdev/SushiFast/files/8100495/Evile_Storie_Sushi_Fast.pdf)
 
